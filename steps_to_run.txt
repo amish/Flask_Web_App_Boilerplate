@@ -1,0 +1,17 @@
+Open cmd in project directory:
+
+	venv\Scripts\activate
+
+Enter below commands:
+
+	set FLASK_APP=fake_news_detection_app.py
+
+	python -m flask run
+
+Open browser:
+
+	http://127.0.0.1:5000/login
+
+	username = admin, password = admin
+
+	Enter a news headline

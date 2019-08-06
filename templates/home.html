@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+	<title>Fake News Prediction</title>
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="theapp">
+	<h1>Enter news headline</h1>
+	<br>
+		<form action="http://127.0.0.1:5000/result" method="post">
+	        <input type="text" placeholder="headline" name="statement" value="{{ request.form.statement }}">
+	        <input class="btn btn-default" type="submit" value="Check">
+	    </form>
+    </div>
+	{% if request.form.statement %}
+		<h1>Statement: {{ request.form.statement }} </h1>
+		<h1>Prediction: {{ final }} </h1>
+		<h1>Probability: {{ proba }} </h1>
+	{% endif %}
+</body>
